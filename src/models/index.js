@@ -1,2 +1,3 @@
 module.exports.User = require("./user.model");
-module.exportsCategory = require("./category.model");
+module.exports.Category = require("./category.model");
+module.exports.Book = require('./book.model');
