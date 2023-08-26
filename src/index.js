@@ -1,4 +1,5 @@
 const http = require('http');
+const bodyParser = require("body-parser");
 // let fs = require('fs');
 const express = require("express");
 const config = require("./config/config");
@@ -34,6 +35,18 @@ const app = express();
 // }).listen(5000);
 
 
+/**
+ * allow form-data from body
+ * form-data is use for image upload
+ * parse application/x-www-form-urlencoded
+ */
+app.use(bodyParser.urlencoded({ extended: false }));
+
+/**
+ * allow json data from body
+ * parse application/json
+ */
+app.use(bodyParser.json());
 
 /** create server using http */
 const server = http.createServer(app);
@@ -45,11 +58,10 @@ server.listen(config.port, () => {
 /** Database connection */
 connectDB();
 
-
 /* use routes */
 app.use("/v1", routes);
 
 /** whenever route not created and you try to use that route then throw error. */
 app.use((req, res, next) => {
     next(new Error("Route not found!"));
-  });
+});
