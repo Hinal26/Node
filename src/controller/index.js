@@ -6,3 +6,5 @@ module.exports.hotelController = require('./hotel.controller');
 module.exports.movieController = require('./movie.controller');
 module.exports.busController = require('./bus.controller');
 module.exports.musicController = require('./music.controller');
+module.exports.travelController = require('./travel.controller');
+module.exports.stationaryController = require('./stationary.controller');
