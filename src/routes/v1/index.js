@@ -9,6 +9,8 @@ const busRoute = require('./bus.route');
 const musicRoute = require('./music.route');
 const travelRoute = require('./travel.route');
 const stationaryRoute = require('./stationary.route');
+const pharmacyRoute = require('./pharmacy.route');
+const jewelleryRoute = require('./jewellery.route');
 
 
 
@@ -24,6 +26,8 @@ router.use("/bus", busRoute);
 router.use("/music", musicRoute);
 router.use("/travel", travelRoute);
 router.use("/stationary", stationaryRoute);
+router.use("/pharmacy", pharmacyRoute);
+router.use("/jewellery", jewelleryRoute);
 
 
 

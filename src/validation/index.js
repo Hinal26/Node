@@ -8,3 +8,5 @@ module.exports.busValidation = require('./bus.validation');
 module.exports.musicValidation = require('./music.validation');
 module.exports.travelValidation = require('./travel.validation');
 module.exports.stationaryValidation = require('./stationary.validation');
+module.exports.pharmacyValidation = require('./pharmacy.validation');
+module.exports.jewelleryValidation = require('./jewellery.validation');

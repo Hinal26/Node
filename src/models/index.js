@@ -8,3 +8,5 @@ module.exports.Bus = require('./bus.model');
 module.exports.Music = require('./music.model');
 module.exports.Travel = require('./travel.model');
 module.exports.stationary = require('./stationary.model');
+module.exports.Pharmacy = require('./pharmacy.model');
+module.exports.Jewellery = require('./jewellery.model');
