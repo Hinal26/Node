@@ -22,81 +22,78 @@ const getBusList = async (req, res) => {
     try {
         const reqBody = req.body;
 
-        const getBus = await busService.getBusList(reqBody);
-        if (!getBus) {
+        const bus = await busService.getBusList(reqBody);
+        if (!bus) {
             throw new Error("Bus list not found!");
         }
 
         res.status(200).json({
             success: true,
             message: "Get bus list successfully!",
-            data: getBus,
+            data: {bus}
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
     }
 };
 
-/** Get bus details by id */
-const getBusDetails = async (req, res) => {
-    try {
-        const busId = req.params.schoolId;
-        const getDetails = await busService.getBusById(busIdId);
-        if (!getDetails) {
-            throw new Error("Bus details not found!");
-        }
+// /** Get bus details by id */
+// const busDetails = async (req, res) => {
+//     try {
+//         const busId = req.params.schoolId;
+//         const getDetails = await busService.getBusById(busId);
+//         if (!getDetails) {
+//             throw new Error("Bus details not found!");
+//         }
 
-        res.status(200).json({
-            success: true,
-            message: "Bus details get successfully!",
-            data: getDetails,
-        });
-    } catch (error) {
-        res.status(400).json({ success: false, message: error.message });
-    }
-};
+//         res.status(200).json({
+//             success: true,
+//             message: "Bus details get successfully!",
+//             data: getDetails,
+//         });
+//     } catch (error) {
+//         res.status(400).json({ success: false, message: error.message });
+//     }
+// };
 
-/** bus details update by id */
-const updateBusDetails = async (req, res) => {
-    try {
-        const busId = req.params.busId;
-        const getDetails = await busService.getBusById(busId);
-        if (!getDetails) {
-            throw new Error("Bus not found!");
-        }
+// /** bus details update by id */
+// const updateBusDetails = async (req, res) => {
+//     try {
+//         const busId = req.params.busId;
+//         const getDetails = await busService.getBusById(busId);
+//         if (!getDetails) {
+//             throw new Error("Bus not found!");
+//         }
 
-        await busService.updateBusDetails(busId, req.body);
+//         await busService.updateBusDetails(busId, req.body);
 
-        res.status(200).json({ success: true, message: "Bus details update successfully!" });
-    } catch (error) {
-        res.status(400).json({ success: false, message: error.message });
-    }
-};
+//         res.status(200).json({ success: true, message: "Bus details update successfully!" });
+//     } catch (error) {
+//         res.status(400).json({ success: false, message: error.message });
+//     }
+// };
 
-/** Delete bus */
-const deleteBus = async (req, res) => {
-    try {
-        const busId = req.params.busId;
-        const getDetails = await schoolService.getBusById(busId);
-        if (!getDetails) {
-            throw new Error("Bus not found!");
-        }
+// /** Delete bus */
+// const deleteBus = async (req, res) => {
+//     try {
+//         const busId = req.params.busId;
+//         const getDetails = await schoolService.getBusById(busId);
+//         if (!getDetails) {
+//             throw new Error("Bus not found!");
+//         }
 
-        await busService.deleteBus(busId);
+//         await busService.deleteBus(busId);
 
-        res.status(200).json({
-            success: true,
-            message: "Bus delete successfully!",
-        });
-    } catch (error) {
-        res.status(400).json({ success: false, message: error.message });
-    }
-};
+//         res.status(200).json({
+//             success: true,
+//             message: "Bus delete successfully!",
+//         });
+//     } catch (error) {
+//         res.status(400).json({ success: false, message: error.message });
+//     }
+// };
 
 module.exports = {
     createBus,
-    getBusList,
-    getBusDetails,
-    updateBusDetails,
-    deleteBus
+    getBusList
 };

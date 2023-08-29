@@ -83,7 +83,6 @@ const deleteSchool = async (req, res) => {
         }
 
         await schoolService.deleteSchool(schoolId);
-
         res.status(200).json({
             success: true,
             message: "School delete successfully!",

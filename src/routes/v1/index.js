@@ -10,8 +10,7 @@ const musicRoute = require('./music.route');
 const travelRoute = require('./travel.route');
 const stationaryRoute = require('./stationary.route');
 const pharmacyRoute = require('./pharmacy.route');
-const jewelleryRoute = require('./jewellery.route');
-
+// const jewelleryRoute = require('./jewellery.route');
 
 
 const router = express.Router();
@@ -27,8 +26,7 @@ router.use("/music", musicRoute);
 router.use("/travel", travelRoute);
 router.use("/stationary", stationaryRoute);
 router.use("/pharmacy", pharmacyRoute);
-router.use("/jewellery", jewelleryRoute);
-
+// router.use("/jewellery", jewelleryRoute);
 
 
 module.exports = router;

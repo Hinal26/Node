@@ -7,7 +7,7 @@ const createTravel = async (reqBody) => {
 
 /** Get travel list */
 const getTravelList = async () => {
-    return Travel.find({ $or: [{ is_active: false }] });
+    return Travel.find({ $or: [{ is_active: true }] });
 };
 
 /** Get travel by Id */

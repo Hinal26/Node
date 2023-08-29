@@ -1,34 +1,34 @@
-const { School } = require("../models");
+const { User } = require("../models");
 
-/** Create school */
-const createSchool = async (reqBody) => {
-    return School.create(reqBody);
+/** Create user */
+const createUser = async (reqBody) => {
+    return User.create(reqBody);
 }
 
-/** Get school list */
-const getSchoolList = async () => {
-    return School.find({ $or: [{ is_active: false }] });
+/** Get user list */
+const getUserList = async () => {
+    return User.find({ $or: [{ is_active: false }] });
 };
 
-/** Get school by Id */
-const getSchoolById = async (schoolId) => {
-    return School.findById(schoolId);
+/** Get user by Id */
+const getUserById = async (userID) => {
+    return User.findById(userID);
 };
 
-/** Update school by Id */
-const updateSchoolDetails = async (schoolId, update) => {
-    return School.findByIdAndUpdate(schoolId, { $set: update });
+/** Update user by Id */
+const updateUserDetails = async (userID, update) => {
+    return User.findByIdAndUpdate(userID, { $set: update });
 };
 
-/** Delete School */
-const deleteSchool = async (schoolId) => {
-    return School.findByIdAndDelete(schoolId);
+/** Delete user */
+const deleteUser = async (userID) => {
+    return User.findByIdAndDelete(userID);
 };
 
 module.exports = {
-    createSchool,
-    getSchoolList,
-    getSchoolById,
-    updateSchoolDetails,
-    deleteSchool
+    createUser,
+    getUserList,
+    getUserById,
+    updateUserDetails,
+    deleteUser
 };

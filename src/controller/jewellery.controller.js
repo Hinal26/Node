@@ -9,7 +9,7 @@ const createJewellery = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "jewellery create successfully!",
+            message: "Jewellery create successfully!",
             data: { jewellery },
         });
     } catch (error) {
@@ -95,7 +95,7 @@ const deleteJewellery = async (req, res) => {
 
 module.exports = {
     createJewellery,
-    getJewelleryDetails,
+    getJewelleryList,
     getJewelleryDetails,
     updateJewelleryDetails,
     deleteJewellery

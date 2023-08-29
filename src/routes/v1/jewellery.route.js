@@ -1,6 +1,6 @@
 const express = require("express");
 const { jewelleryValidation } = require("../../validation");
-const { jewelleryController } = require("../../controller");
+const jewelleryController  = require("../../controller/jewellery.controller");
 const validate = require("../../middlewares/validate");
 
 const router = express.Router();
@@ -26,12 +26,12 @@ router.get(
     jewelleryController.getJewelleryDetails
 );
 
-/** jewellery details update by id */
-router.put(
-    "/update-jewellery-details/:jeId",
-    validate(jewelleryValidation.updateJewellerDetails),
-    jewelleryController.updateJewellerDetails
-);
+// /** jewellery details update by id */
+// router.put(
+//     "/update-jewellery-details/:jewelleryId",
+//     validate(jewelleryValidation.updateJewellerDetails),
+//     jewelleryController.updateJewellerDetails
+// );
 
 /** Delete jewellery */
 router.delete(

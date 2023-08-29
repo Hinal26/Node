@@ -19,25 +19,25 @@ router.get(
     busController.getBusList
 );
 
-/** Get bus details by id */
-router.get(
-    "/get-bus-details/:busId",
-    validate(busValidation.getBusDetails),
-    busController.getBusDetails
-);
+// /** Get bus details by id */
+// router.get(
+//     "/get-bus-details/:busId",
+//     validate(busValidation.getBusDetails),
+//     busController.getBusDetails
+// );
 
-/** bus details update by id */
-router.put(
-    "/update-bus-details/:busId",
-    validate(busValidation.updateBusDetails),
-    busController.updateBusDetails
-);
+// /** bus details update by id */
+// router.put(
+//     "/update-bus-details/:busId",
+//     validate(busValidation.updateBusDetails),
+//     busController.updateBusDetails
+// );
 
-/** Delete bus */
-router.delete(
-    "/delete-bus/:busId",
-    validate(busValidation.getBusDetails),
-    busController.deleteBus
-);
+// /** Delete bus */
+// router.delete(
+//     "/delete-bus/:busId",
+//     validate(busValidation.getBusDetails),
+//     busController.deleteBus
+// );
 
 module.exports = router;

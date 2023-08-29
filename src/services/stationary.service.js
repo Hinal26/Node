@@ -7,7 +7,7 @@ const createStationary = async (reqBody) => {
 
 /** Get school list */
 const getStationaryList = async () => {
-    return Stationary.find({ $or: [{ is_active: false }] });
+    return Stationary.find({ $or: [{ is_active: true }] });
 };
 
 /** Get Stationary by Id */

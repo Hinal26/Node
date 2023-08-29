@@ -7,7 +7,7 @@ const createMusic = async (reqBody) => {
 
 /** Get music list */
 const getMusicList = async () => {
-    return Music.find({ $or: [{ is_active: false }] });
+    return Music.find({ $or: [{ is_active: true }] });
 };
 
 /** Get music by Id */
