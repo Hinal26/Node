@@ -18,6 +18,10 @@ const busSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    teavel: {
+      type: mongoose.Types.ObjectId,
+      ref: "travel"
+    }
   },
   {
     timestamps: true,

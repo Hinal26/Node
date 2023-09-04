@@ -18,6 +18,10 @@ const stationarySchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    category: {
+      type: mongoose.Types.ObjectId,
+      ref: "category"
+    }
   },
   {
     timestamps: true,

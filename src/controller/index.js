@@ -10,3 +10,4 @@ module.exports.travelController = require('./travel.controller');
 module.exports.stationaryController = require('./stationary.controller');
 module.exports.pharmacyController = require('./pharmacy.controller');
 module.exports.jewelleryCortroller = require('./jewellery.controller');
+module.exports.mobileController = require('./mobile.controller');

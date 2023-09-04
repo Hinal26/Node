@@ -9,7 +9,7 @@ const createUser = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "User create successfully!",
+            message: "User creat successfully!",
             data: { user },
         });
     } catch (error) {
@@ -86,7 +86,7 @@ const deleteUser = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "User delete successfully!",
+            message: "User details successfully!",
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });

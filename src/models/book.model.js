@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Category = require("./category.model");
 
 const bookSchema = new mongoose.Schema(
   {
@@ -17,6 +18,10 @@ const bookSchema = new mongoose.Schema(
     is_active: {
       type: Boolean,
       default: true,
+    },
+    Category : {
+      type : mongoose.Types.ObjectId,
+      ref : "category"
     },
   },
   {

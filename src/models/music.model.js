@@ -18,6 +18,10 @@ const musicSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    movie: {
+      type: mongoose.Types.ObjectId,
+      ref: "movie"
+    }
   },
   {
     timestamps: true,

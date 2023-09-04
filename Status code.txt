@@ -1,0 +1,22 @@
+100 -> continue
+200 -> OK
+300 -> multiple choices
+400 -> Bad request 
+500 -> Internal server error
+101 -> Switching protocols
+102 -> Processing
+103 -> Early hints
+104 -> Checkpoint
+201 -> created 
+202 -> Accepted
+207 -> Multi status
+301 -> More permanetly
+302 -> Found
+401 -> Unauthorized
+402 -> Payment required
+403 -> Forbidden
+405 -> Methoed not allowed
+406 -> Not acceptable
+422 -> Unprocessable entity
+502 -> Bad gateway
+503 -> Service unavailable

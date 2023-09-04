@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-const jewellerySchema = new mongoose.Schema(
+const mobileSchema = new mongoose.Schema(
   {
-    jewellery_name: {
+    mobile_name: {
       type: String,
       trim: true,
     },
-    pieces: {
+    peace: {
       type: Number,
       trim: true,
     },
@@ -29,5 +29,5 @@ const jewellerySchema = new mongoose.Schema(
   }
 );
 
-const Jewellery = mongoose.model("jewellery", jewellerySchema);
-module.exports = Jewellery;
+const Mobile = mongoose.model("mobile", mobileSchema);
+module.exports = Mobile;

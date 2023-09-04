@@ -18,6 +18,10 @@ const hotelSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    travel: {
+      type: mongoose.Types.ObjectId,
+      ref: "travel"
+    }
   },
   {
     timestamps: true,
